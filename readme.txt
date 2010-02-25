@@ -4,7 +4,7 @@ Donate link: http://chatroll.com
 Tags: chatroll, live, widget, chat, sidebar, shoutbox
 Requires at least: 2.8
 Tested up to: 2.9
-Stable tag: trunk
+Stable tag: 1.2.1
 
 Widget and shortcode for adding Chatroll live chat to your WordPress sidebar, posts and pages.
 
