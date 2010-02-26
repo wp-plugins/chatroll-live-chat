@@ -15,10 +15,12 @@ Use Chatroll as a <b>live chat</b> or <b>shoutbox</b> on your sidebar, posts and
 
 
 **Getting Started:**
+
 *  <a href='http://chatroll.com/create'>Install Chatroll in 3 Easy Steps &raquo;</a>
 
 
 **Related Links:**
+
 *  <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll Demo &raquo;</a>
 *  <a href="http://chatroll.com/help/support?r=wordpress-org">Support &raquo;</a>
 
