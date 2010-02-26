@@ -13,7 +13,7 @@ Chatroll is a simple and flexible chat for WordPress. You can use it as a chat o
 <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll</a> is a simple and flexible chat for WordPress.
 Use Chatroll as a <b>live chat</b> or <b>shoutbox</b> on your sidebar, posts and pages.
 
-***Your rating and feedback is important and will help us improve Chatroll.  Please leave a feedback!***
+*Your rating and feedback is important and will help us improve Chatroll.  Please leave a feedback!*
 
 **Getting Started:**
 
