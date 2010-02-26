@@ -22,8 +22,8 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 
 **Related Links:**
 
-*  <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll Demo &raquo;</a>
-*  <a href="http://chatroll.com/help/support?r=wordpress-org">Support &raquo;</a>
+*  <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll Wordpress Chat Demo &raquo;</a>
+*  <a href="http://chatroll.com/help/support?r=wordpress-org">Chat plugin Support &raquo;</a>
 
 
 **Benefits & Features:**
@@ -31,7 +31,7 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 ***Elegant & Simple Interface***
 
 * Clean, clutter-free user interface
-* Embed using shortcode or widget
+* Embed chat using shortcode or widget
 
 ***Flexible Customization***
 
@@ -43,7 +43,7 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 
 ***Powerful Moderation***
 
-* Moderate with 1-click delete, profanity filters and IP block
+* Moderate chat with 1-click delete, profanity filters and IP block
 
 ***Fine-Grained Access Control***
 
@@ -57,7 +57,7 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 ***Hosted, Cloud Solution***
 
 * No programming, servers or database maintenance
-* On-demand scaling - Supports over 500+ simultaneous users
+* On-demand scaling - Supports over 500+ simultaneous users in chat
 
 ***FREE!***
 
@@ -74,7 +74,7 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 
 **Easy Installtion**
 
-Install in 3 Easy Steps. Start here: <a href='http://chatroll.com/create'>**Create your Chatroll &raquo;**</a>
+Install in chat 3 Easy Steps. Start here: <a href='http://chatroll.com/create'>**Create your Chatroll &raquo;**</a>
 
 
 **Advanced Installation**
