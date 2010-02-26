@@ -14,56 +14,58 @@ Chatroll is a simple and flexible chat for WordPress. You can use it as a chat o
 Use Chatroll as a <b>live chat</b> or <b>shoutbox</b> on your sidebar, posts and pages.
 
 
-***Getting Started***
-* <a href='http://chatroll.com/create'>Install Chatroll in 3 Easy Steps &raquo;</a>
+**Getting Started:**
+*  <a href='http://chatroll.com/create'>Install Chatroll in 3 Easy Steps &raquo;</a>
 
 
-***Related Links***
-* <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll Demo &raquo;</a>
-* <a href="http://chatroll.com/help/support?r=wordpress-org">Support &raquo;</a>
+**Related Links:**
+*  <a href="http://chatroll.com/solutions/wordpress-chat-plugin">Chatroll Demo &raquo;</a>
+*  <a href="http://chatroll.com/help/support?r=wordpress-org">Support &raquo;</a>
 
 
-***Benefits & Features***
+**Benefits & Features:**
 
-**Elegant & Simple Interface**
+***Elegant & Simple Interface***
 * Clean, clutter-free user interface
 * Embed using shortcode or widget
 
-**Flexible Customization**
+***Flexible Customization***
 * Customize colors and size to match the look of your site
 
-**User Integration**
+***User Integration***
 * Supports Single Sign-On (SSO) for seamless integration with WordPress user profiles
 
-**Powerful Moderation**
+***Powerful Moderation***
 * Moderate with 1-click delete, profanity filters and IP block
 
-**Fine-Grained Access Control**
+***Fine-Grained Access Control***
 * Manage read, write and moderate permissions for Guests and Registered users
 
-**Fast Loading and Scalable**
+***Fast Loading and Scalable***
 * Chat connects instantly - No heavy Flash download!
 * AJAX / DHTML compliant - Works on all major browsers, iPhone and Android!
 
-**Hosted, Cloud Solution**
+***Hosted, Cloud Solution***
 * No programming, servers or database maintenance
 * On-demand scaling - Supports over 500+ simultaneous users
 
-**Free!**
+***FREE!***
 * Get it Free today
 * Upgrade anytime for premium support and capacity
 
 
-***Important: Please Rate the Chatroll Plugin!***
+**Important: Please Rate the Chatroll Plugin!**
 Your rating and feedback will help us improve Chatroll, and is important.  Please leave a feedback!
 
 
-***<a href='http://chatroll.com/create'>Get Your Chatroll Now &raquo;</a>***
+**<a href='http://chatroll.com/create'>Get Your Chatroll Now &raquo;</a>**
 
 
 == Installation ==
 
-**Follow the 3 Step Install wizard. Start here:**
+**Easy Installation**
+
+Install in 3 Easy Steps. Start here:
 * <a href='http://chatroll.com/create'>Create your Chatroll &raquo;</a>
 
 
