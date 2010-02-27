@@ -74,7 +74,7 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 
 **Easy Installtion**
 
-Install in chat 3 Easy Steps. Start here: <a href='http://chatroll.com/create'>**Create your Chatroll &raquo;**</a>
+Install chat in 3 Easy Steps. Start here: <a href='http://chatroll.com/create'>**Create your Chatroll &raquo;**</a>
 
 
 **Advanced Installation**
@@ -109,7 +109,7 @@ Publishers use Chatroll in a wide variety of ways.  Most commonly, they are used
 * **Sidebar shoutbox** - See the number of viewers online and interact with your readers
 * **Pop-out shoutbox** - Add a link to popup a shoutbox, create your own IM for your site
 * **Comment shoutbox** - Add a shoutbox as a footer widget, for users to leave live comments
-* **Combined** - Add it on the side widget as a shoutbox and add it on a page as a live chat
+* **Combined** - Add it on the sidebar as a shoutbox and add it on a page as a live chat
 
 
 = I get an error similar to "Parse error: syntax error, unexpected T_STRING, expecting T_OLD_FUNCTION or T_FUNCTION or T_VAR or '}' in /.../wp-chatroll.php on line ##" when I try to activate the plugin.  Is your plugin broken? =
