@@ -10,7 +10,7 @@ Chatroll is a simple and flexible chat plugin for WordPress. Use Chatroll as a l
 
 == Description ==
 
-<a href="http://chatroll.com/">Chatroll</a> is a simple and flexible chat plugin for WordPress.
+**Chatroll Live Chat** is a simple and flexible chat plugin for WordPress.
 Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages.
 
 **Benefits & Features:**
@@ -51,21 +51,19 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 * Get it Free today
 * Upgrade anytime for additional capacity and support
 
-<a href='http://wordpress.org/extend/plugins/chatroll-live-chat/installation/'>**Install Chatroll Now &raquo;**</a>
-
 
 == Installation ==
 
 **Quick Install**
 
-<a href='http://chatroll.com/create'>**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to install the plugin and add Chatroll to your sidebar, posts and pages.
+<a href="http://chatroll.com/create" target="_blank">**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to install the plugin and add Chatroll to your sidebar, posts and pages.
 
 **Manual Install**
 
 1. Download and extract the plugin
 2. Upload the `chatroll-live-chat` directory to your `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
-4. <a href='http://chatroll.com/create'>**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to add Chatroll to your sidebar, posts and pages.
+4. <a href="http://chatroll.com/create" target="_blank">**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to add Chatroll to your sidebar, posts and pages.
 
 == Frequently Asked Questions ==
 
@@ -76,7 +74,7 @@ Yes, you can add as many Chatroll widgets as you want to your sidebar, posts and
 
 = How can I add a Chatroll widget to a post or page? =
 
-<a href="http://chatroll.com/create">Click here</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to get a shortcode and paste it in a post or page.
+Use the 'chatroll' shortcode anywhere in a post or page. <a href="http://chatroll.com/create" target="_blank">Click here</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to install the plugin and get a shortcode to paste in your post or page.
 
 
 = What are some ways I can use Chatroll?  =
