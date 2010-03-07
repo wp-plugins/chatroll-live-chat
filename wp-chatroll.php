@@ -3,7 +3,7 @@
  * Plugin Name: Chatroll Live Chat
  * Plugin URI: http://chatroll.com
  * Description: Add <a href="http://chatroll.com">Chatroll</a> live chat to your WordPress sidebar, posts, and pages. Adds a widget to put on your sidebar, and a 'chatroll' shortcode to use in posts and pages. Includes Single Sign-On (SSO) support for integrating WordPress login.
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: Chatroll
  * Author URI: http://chatroll.com
  * Text Domain: wp-chatroll
@@ -235,55 +235,112 @@ class wpChatroll extends Chatroll
 		return $widgetContent;
 	}
 
-    /**
-     * OVERRIDE Chatroll::appendPlatformDefaultAttr()
-     *  Set user parameters for SSO integration
-     */
-    public function appendPlatformDefaultAttr($attr) {
-	    $attr['platform'] = 'wordpress-org';
+	/**
+	 * We need special handling for Gravatar image URLs because:
+	 *  1) Chatroll requires image URLs to have valid filename extensions (.png, .jpg, etc.)
+	 *  2) Chatroll does not support image URLs that redirect or have GET parameters
+	 * Both these issues should be fixed in a future Chatroll service update.
+	 * Please contact support@chatroll.com for more information.
+	 */
+	public function getGravatarUrl($url)
+	{
+		// Gravatar URL pattern
+		$gpattern = "http:\/\/www\.gravatar\.com\/avatar\/[a-z0-9]+";
 
-        if ($this->showlink) {
-            $attr['linkurl'] = "/solutions/wordpress-chat-plugin";
-            $attr['linktxt'] = "Wordpress chat";
-        } else {
-            $attr['linkurl'] = "";
-            $attr['linktxt'] = "";
-        }
+		// Decode URL-encoded characters in the Gravatar URL for processing
+		$url = urldecode($url);
 
-        // Generate SSO attributes that were not specified
-        global $current_user;
-        get_currentuserinfo();
-        if (empty($attr['uid'])) {
-            $attr['uid'] = $current_user->ID;
-        }
-        if (empty($attr['uname'])) {
-            $attr['uname'] = $current_user->display_name;
-        }
-        if (empty($attr['upic'])) {
-            // Customize this depending on what avatar system is used. There is no Wordpress standard.
-            // e.g. urlencode($current_user->user_pic);
-        }
-        if (empty($attr['ulink'])) {
-            $attr['ulink'] = $current_user->user_url;
-        }
-        if (empty($attr['ismod'])) {
-            // By default, if the user can moderate comments, they can moderate the chat
-            $attr['ismod'] = current_user_can('moderate_comments') ? '1' : '0';
-        }
-        return $attr;
-    }
+		// Extract the user image URL and default image URL from the combined Gravatar URL
+		$userUrl = "";
+		$defaultUrl = "";
+		if (preg_match("/(" . $gpattern . ").*d=(" . $gpattern . ").*/", $url, $matches)) {
+			$userUrl = $matches[1];
+			$defaultUrl = $matches[2];
+		}
 
-    /**
+		// Use CURL to check if the Gravatar exists, otherwise use the default image URL
+		$ch = curl_init($userUrl . "?d=404");
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_FAILONERROR, true);
+		curl_setopt($ch, CURLOPT_NOBODY, true);
+		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+		curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.1; it; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6");
+		$html = curl_exec($ch);
+		if(!curl_errno($ch)) {
+			return $userUrl . ".jpg";
+		} else {
+			return $defaultUrl . ".jpg";
+		}
+	}
+
+	/**
+	 * OVERRIDE Chatroll::appendPlatformDefaultAttr()
+	 *  Set user parameters for SSO integration
+	 */
+	public function appendPlatformDefaultAttr($attr) {
+		$attr['platform'] = 'wordpress-org';
+
+		if ($this->showlink) {
+			$attr['linkurl'] = "/solutions/wordpress-chat-plugin";
+			$attr['linktxt'] = "Wordpress chat";
+		} else {
+			$attr['linkurl'] = "";
+			$attr['linktxt'] = "";
+		}
+
+		// Generate SSO attributes that were not specified
+		global $current_user;
+		get_currentuserinfo();
+		if (empty($attr['uid'])) {
+			$attr['uid'] = $current_user->ID;
+		}
+		if (empty($attr['uname'])) {
+			$attr['uname'] = $current_user->display_name;
+		}
+		if (empty($attr['upic'])) {
+			// Set the picture using 'get_avatar' (available in WordPress 2.5 and up)
+			// This ONLY takes effect when the Single Sign-On (SSO) check box is turned on via the Chatroll's Settings page!
+			if (function_exists('get_avatar')) {
+				$avtr = get_avatar($current_user->ID, 38);
+				$avtr_src = preg_replace("/.*src='([^']*)'.*/", "$1", $avtr);
+				if (strlen($avtr_src) > 0) {
+					if ($avtr_src[0] == '/') {
+						// Turn local image URIs into full URLs.
+						$url = get_bloginfo('url');
+						$domain = preg_replace("/^(http[s]?:\/\/[^\/]+).*/", "$1", $url);
+						$avtr_src = $domain . $avtr_src;
+					} else if (preg_match("/gravatar\.com/", $avtr_src)) {
+						// Get full Gravatar image URL (with extension)
+						$avtr_src = $this->getGravatarUrl($avtr_src);
+					}
+					$attr['upic'] = $avtr_src;
+				}
+			}
+		}
+		if (empty($attr['ulink'])) {
+			$attr['ulink'] = $current_user->user_url;
+		}
+		if (empty($attr['ismod'])) {
+			// By default, if the user can moderate comments, they can moderate the chat
+			$attr['ismod'] = current_user_can('moderate_comments') ? '1' : '0';
+		}
+		return $attr;
+	}
+
+	/**
 	 * Replace our shortCode with the Chatroll iframe
 	 *
 	 * @param array $attr - array of attributes from the shortCode
 	 * @param string $content - Content of the shortCode
 	 * @return string - formatted XHTML replacement for the shortCode
 	 */
-    public function handleShortcode($attr, $content = '') {
-        return $this->renderChatrollHtml($attr);
+	public function handleShortcode($attr, $content = '') {
+		return $this->renderChatrollHtml($attr);
 	}
 }
+
 /**
  * Instantiate our class
  */
