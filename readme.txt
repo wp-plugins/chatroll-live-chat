@@ -4,7 +4,7 @@ Donate link: http://chatroll.com
 Tags: chatroll, live, widget, chat, sidebar, shoutbox
 Requires at least: 2.8
 Tested up to: 2.9
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 
 Chatroll is a simple and flexible chat plugin for WordPress. Use Chatroll as a live chat or shoutbox on your sidebar, posts and pages.
 
@@ -106,6 +106,9 @@ For more information, check out our <a href="http://chatroll.com/tour">Tour</a> 
 
 
 == Changelog ==
+
+= 1.2.5 =
+* Improved Gravatar support. Removed Curl dependency.
 
 = 1.2.4 =
 * Add support for Gravatars and local avatars.

@@ -236,46 +236,6 @@ class wpChatroll extends Chatroll
 	}
 
 	/**
-	 * We need special handling for Gravatar image URLs because:
-	 *  1) Chatroll requires image URLs to have valid filename extensions (.png, .jpg, etc.)
-	 *  2) Chatroll does not support image URLs that redirect or have GET parameters
-	 * Both these issues should be fixed in a future Chatroll service update.
-	 * Please contact support@chatroll.com for more information.
-	 */
-	public function getGravatarUrl($url)
-	{
-		// Gravatar URL pattern
-		$gpattern = "http:\/\/www\.gravatar\.com\/avatar\/[a-z0-9]+";
-
-		// Decode URL-encoded characters in the Gravatar URL for processing
-		$url = urldecode($url);
-
-		// Extract the user image URL and default image URL from the combined Gravatar URL
-		$userUrl = "";
-		$defaultUrl = "";
-		if (preg_match("/(" . $gpattern . ").*d=(" . $gpattern . ").*/", $url, $matches)) {
-			$userUrl = $matches[1];
-			$defaultUrl = $matches[2];
-		}
-
-		// Use CURL to check if the Gravatar exists, otherwise use the default image URL
-		$ch = curl_init($userUrl . "?d=404");
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-		curl_setopt($ch, CURLOPT_FAILONERROR, true);
-		curl_setopt($ch, CURLOPT_NOBODY, true);
-		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.1; it; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6");
-		$html = curl_exec($ch);
-		if(!curl_errno($ch)) {
-			return $userUrl . ".jpg";
-		} else {
-			return $defaultUrl . ".jpg";
-		}
-	}
-
-	/**
 	 * OVERRIDE Chatroll::appendPlatformDefaultAttr()
 	 *  Set user parameters for SSO integration
 	 */
@@ -303,6 +263,7 @@ class wpChatroll extends Chatroll
 			// Set the picture using 'get_avatar' (available in WordPress 2.5 and up)
 			// This ONLY takes effect when the Single Sign-On (SSO) check box is turned on via the Chatroll's Settings page!
 			if (function_exists('get_avatar')) {
+                // 38px image size
 				$avtr = get_avatar($current_user->ID, 38);
 				$avtr_src = preg_replace("/.*src='([^']*)'.*/", "$1", $avtr);
 				if (strlen($avtr_src) > 0) {
@@ -311,11 +272,11 @@ class wpChatroll extends Chatroll
 						$url = get_bloginfo('url');
 						$domain = preg_replace("/^(http[s]?:\/\/[^\/]+).*/", "$1", $url);
 						$avtr_src = $domain . $avtr_src;
-					} else if (preg_match("/gravatar\.com/", $avtr_src)) {
-						// Get full Gravatar image URL (with extension)
-						$avtr_src = $this->getGravatarUrl($avtr_src);
-					}
-					$attr['upic'] = $avtr_src;
+					} 
+                    // The gravatar image URL is extracted from an image tag and ampersands (&) are escaped to &amp;
+                    // Chatroll uses the URL to download the image, as opposed to using it directly for an html img tag.
+                    // Thus we need to un-escape the specialchars. (e.g. &amp; -> &)
+					$attr['upic'] = htmlspecialchars_decode($avtr_src);
 				}
 			}
 		}
