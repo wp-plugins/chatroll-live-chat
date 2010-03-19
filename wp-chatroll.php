@@ -3,7 +3,7 @@
  * Plugin Name: Chatroll Live Chat
  * Plugin URI: http://chatroll.com
  * Description: Add <a href="http://chatroll.com">Chatroll</a> live chat to your WordPress sidebar, posts, and pages. Adds a widget to put on your sidebar, and a 'chatroll' shortcode to use in posts and pages. Includes Single Sign-On (SSO) support for integrating WordPress login.
- * Version: 1.2.4
+ * Version: 1.2.5
  * Author: Chatroll
  * Author URI: http://chatroll.com
  * Text Domain: wp-chatroll
