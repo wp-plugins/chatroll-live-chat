@@ -1,21 +1,26 @@
 === Chatroll Live Chat ===
 Contributors: chatroll
 Donate link: http://chatroll.com
-Tags: chatroll, live, widget, chat, sidebar, shoutbox
+Tags: chatroll, live, widget, chat, facebook, twitter, sidebar, shoutbox
 Requires at least: 2.8
-Tested up to: 2.9
-Stable tag: 1.2.5
+Tested up to: 3.2.1
+Stable tag: 2.1
 
-Chatroll is a simple and flexible chat plugin for WordPress. Use Chatroll as a live chat or shoutbox on your sidebar, posts and pages.
+Chatroll is a great new way to reach, engage and grow your site's social media following. Add Chatroll's leading social chat widget to your WordPress sidebar, posts, and pages.
 
 == Description ==
 
-**Chatroll Live Chat** is a simple and flexible chat plugin for WordPress.
-Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages.
+**Chatroll** is a great new way to **reach, engage and grow your site's social media following**. Add Chatroll's leading **social chat widget** to your WordPress sidebar, posts, and pages.
 
 **Benefits & Features:**
 
-***Elegant & Simple Interface***
+***Social Chat***
+
+* True real-time social interaction
+* Reach, engage and grow your social media following
+* Facebook and Twitter support
+
+***Simple Design***
 
 * Clean, clutter-free user interface
 * Embed chat using shortcode or widget
@@ -23,23 +28,17 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 ***Flexible Customization***
 
 * Customize colors and size to match the look of your site
-
-***User Integration***
-
 * Supports Single Sign-On (SSO) for seamless integration with the WordPress login system
 
 ***Powerful Moderation***
 
 * Moderate chat with 1-click delete, profanity filters and IP block
+* Manage permissions for guests, signed-in users and moderators
 
-***Fine-Grained Access Control***
+***Works Everywhere***
 
-* Manage read, write and moderate permissions for Guests and Registered users
-
-***Fast Loading and Scalable***
-
-* Chat connects instantly - No heavy Flash download!
-* AJAX / DHTML compliant - Works on all major browsers, including iPhone and Android!
+* Works on ALL browsers and devices, including iPhone, iPad and Android!
+* Built using HTML5 standards - no Java or Flash necessary
 
 ***Hosted, Cloud Solution***
 
@@ -56,14 +55,14 @@ Use Chatroll as a **live chat** or **shoutbox** on your sidebar, posts and pages
 
 **Quick Install**
 
-<a href="http://chatroll.com/create" target="_blank">**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to install the plugin and add Chatroll to your sidebar, posts and pages.
+<a href="http://chatroll.com/" target="_blank">Create a Chatroll account</a>. From your Chatroll Dashboard, create a new live event and choose the "WordPress Self-Hosted" instructions to install the plugin and add Chatroll to your sidebar, posts and pages.
 
 **Manual Install**
 
 1. Download and extract the plugin
 2. Upload the `chatroll-live-chat` directory to your `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
-4. <a href="http://chatroll.com/create" target="_blank">**Click here**</a> to create a Chatroll. Choose the "WordPress Self-Hosted" instructions to add Chatroll to your sidebar, posts and pages.
+4. <a href="http://chatroll.com/" target="_blank">Create a Chatroll account</a>. From your Chatroll Dashboard, create a new live event and choose the "WordPress Self-Hosted" instructions to add Chatroll to your sidebar, posts and pages.
 
 == Frequently Asked Questions ==
 
@@ -106,6 +105,9 @@ For more information, check out our <a href="http://chatroll.com/tour">Tour</a> 
 
 
 == Changelog ==
+
+= 2.1 =
+* Updated description and install instructions.
 
 = 1.2.5 =
 * Improved Gravatar support. Removed Curl dependency.
