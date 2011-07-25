@@ -6,29 +6,30 @@ Requires at least: 2.8
 Tested up to: 3.2.1
 Stable tag: 2.1
 
-Chatroll is a great new way to reach, engage and grow your site's social media following. Add Chatroll's leading social chat widget to your WordPress sidebar, posts, and pages.
+Chatroll is a great way to reach, engage and grow your site's social media following. Add Chatroll social chat to your WordPress sidebar, posts, and pages.
 
 == Description ==
 
-**Chatroll** is a great new way to **reach, engage and grow your site's social media following**. Add Chatroll's leading **social chat widget** to your WordPress sidebar, posts, and pages.
+Chatroll is a great way to reach, engage and grow your site's social media following. Add Chatroll social chat to your WordPress sidebar, posts, and pages.
 
-**Benefits & Features:**
+**Plugin Highlights:**
 
 ***Social Chat***
 
-* True real-time social interaction
+* True real-time social interaction for WordPress
 * Reach, engage and grow your social media following
 * Facebook and Twitter support
 
 ***Simple Design***
 
 * Clean, clutter-free user interface
-* Embed chat using shortcode or widget
+* Install on posts and pages using the 'chatroll' shortcode
+* Install on your sidebar using the Chatroll WordPress widget
 
 ***Flexible Customization***
 
 * Customize colors and size to match the look of your site
-* Supports Single Sign-On (SSO) for seamless integration with the WordPress login system
+* Single Sign-On (SSO) for seamless integration with WordPress avatars
 
 ***Powerful Moderation***
 
@@ -38,17 +39,17 @@ Chatroll is a great new way to reach, engage and grow your site's social media f
 ***Works Everywhere***
 
 * Works on ALL browsers and devices, including iPhone, iPad and Android!
-* Built using HTML5 standards - no Java or Flash necessary
+* HTML5 compatible - no Java or Flash necessary
 
 ***Hosted, Cloud Solution***
 
-* No programming, servers or database maintenance
+* Hosted on Chatroll's servers for maximum performance
 * On-demand scaling - Supports over 500+ simultaneous users in chat
 
-***FREE!***
+***Free***
 
-* Get started for free
-* Upgrade anytime for additional capacity and support
+* Free version is limited to 10 simultaneous users
+* Upgrade for additional capacity and support
 
 
 == Installation ==
