@@ -3,7 +3,7 @@
  * Plugin Name: Chatroll Live Chat
  * Plugin URI: http://chatroll.com
  * Description: Chatroll is a great new way to <strong>reach, engage and grow your site's social media following</strong>. Add <a href="http://chatroll.com">Chatroll</a>'s leading social chat widget to your WordPress sidebar, posts, and pages. Includes Facebook and Twitter support, and optional WordPress avatar support. To get started: 1) Click the "Activate" link to the left of this description, 2) <a href="http://chatroll.com/">Sign up for a Chatroll account</a>, and 3) Go to your <a href="http://chatroll.com/">Chatroll Dashboard</a> to create a Chatroll event and follow the WordPress install instructions.
- * Version: 2.1
+ * Version: 2.1.1
  * Author: Chatroll
  * Author URI: http://chatroll.com
  * Text Domain: wp-chatroll

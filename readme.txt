@@ -4,7 +4,7 @@ Donate link: http://chatroll.com
 Tags: chatroll, live, widget, chat, facebook, twitter, sidebar, shoutbox
 Requires at least: 2.8
 Tested up to: 3.2.1
-Stable tag: 2.1
+Stable tag: 2.1.1
 
 Chatroll is a great way to reach, engage and grow your site's social media following. Add Chatroll social chat to your WordPress sidebar, posts, and pages.
 
@@ -106,6 +106,9 @@ For more information, check out our <a href="http://chatroll.com/tour">Tour</a> 
 
 
 == Changelog ==
+
+= 2.1.1 =
+* Fixed readme.txt
 
 = 2.1 =
 * Updated description and install instructions.
