@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Chatroll Live Chat
  * Plugin URI: http://chatroll.com
- * Description: Add <a href="http://chatroll.com">Chatroll</a> live chat to your WordPress sidebar, posts, and pages. Adds a widget to put on your sidebar, and a 'chatroll' shortcode to use in posts and pages. Includes Single Sign-On (SSO) support for integrating WordPress login.
- * Version: 1.2.5
+ * Description: Chatroll is a great new way to <strong>reach, engage and grow your site's social media following</strong>. Add <a href="http://chatroll.com">Chatroll</a>'s leading social chat widget to your WordPress sidebar, posts, and pages. Includes Facebook and Twitter support, and optional WordPress avatar support. To get started: 1) Click the "Activate" link to the left of this description, 2) <a href="http://chatroll.com/">Sign up for a Chatroll account</a>, and 3) Go to your <a href="http://chatroll.com/">Chatroll Dashboard</a> to create a Chatroll event and follow the WordPress install instructions.
+ * Version: 2.1.1
  * Author: Chatroll
  * Author URI: http://chatroll.com
  * Text Domain: wp-chatroll
@@ -65,7 +65,7 @@ class WP_Chatroll extends WP_Widget {
 ?>
 
 			<p>
-				<label for="<?php echo $this->get_field_id('shortcode'); ?>"><?php _e('<b>Shortcode</b> (<a href="http://chatroll.com/create" target="_blank">Click here</a> to create a Chatroll and get your Shortcode. Choose the "WordPress Self-Hosted" instructions):', 'wp-chatroll'); ?></label>
+				<label for="<?php echo $this->get_field_id('shortcode'); ?>"><?php _e('<b>Shortcode</b> (Sign in to <a href="http://chatroll.com/" target="_blank">Chatroll</a> to create and manage Chatroll widgets for your WordPress site. To get a shortcode, click "Install Module" from your Chatroll event dashboard and choose the "WordPress Self-Hosted" instructions:', 'wp-chatroll'); ?></label>
 				<input class="widefat" id="<?php echo $this->get_field_id('shortcode'); ?>" name="<?php echo $this->get_field_name('shortcode'); ?>" type="text" value="<?php esc_attr_e($instance['shortcode']); ?>" />
 			</p>
 			<p>
@@ -75,11 +75,11 @@ class WP_Chatroll extends WP_Widget {
 			<p>
 				<i>To make your Chatroll bigger or smaller, change 'width' and 'height' values in the Shortcode above.</i>
 			</p>
-            		<p>To access all other settings, sign in to <a href="http://chatroll.com/" target="_blank">Chatroll</a>, click on your Chatroll's name, then click the <b>Settings</b> tab. Settings include:</p>
+            		<p>Sign in to <a href="http://chatroll.com/" target="_blank">Chatroll</a> to manage your Chatroll widgets. Available settings include:</p>
 			<ul style='list-style-type:disc;margin-left:20px;'>
 			<li><b>Customization</b> &ndash; Change colors, layout and sound</li>
 			<li><b>Moderation Tools</b> &ndash; Manage privacy, users and content</li>
-			<li><b>WordPress Profile Integration</b> &ndash; Let your visitors sign into the chat automatically using their WordPress login. Go to the <b>Settings &rarr; Widget</b> tab and enable the Single Sign-On (SSO) feature.</li>
+			<li><b>WordPress Profile Integration</b> &ndash; Let your visitors sign into the chat automatically using their WordPress login. Go to the <b>Settings &rarr; Access</b> tab and enable the Single Sign-On (SSO) feature.</li>
 			</ul>
 			<p style='padding-top:15px;'>Need Help? <?php echo $wpChatroll->getContactSupportLink(); ?></p>
 			<p>
@@ -199,7 +199,7 @@ class wpChatroll extends Chatroll
 	public function addPluginPageLinks( $links, $file ){
 		if ( $file == plugin_basename(__FILE__) ) {
 			// Create Chatroll link
-			$link = '<a href="http://chatroll.com/create" target="_blank">' . __('Create Chatroll', 'wp-chatroll') . '</a>';
+			$link = '<a href="http://chatroll.com/" target="_blank">' . __('Chatroll Dashboard', 'wp-chatroll') . '</a>';
 			array_push( $links, $link );
 
 			// Add Support link to our plugin
